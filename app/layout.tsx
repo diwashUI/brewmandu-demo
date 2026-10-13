@@ -1,16 +1,31 @@
 import type { Metadata } from "next";
+import { Fraunces } from "next/font/google";
 import "./globals.css";
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
+import { site } from "@/lib/site";
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-fraunces",
+  weight: ["400", "600", "700", "900"],
+});
 
 export const metadata: Metadata = {
-  title: "Brewmandu Coffee Co. — Coffee worth slowing down for",
-  description:
-    "Small-batch Himalayan arabica, roasted in Kathmandu. See the menu, our story, and visit us in Thamel.",
+  title: `${site.name} ${site.suffix} — ${site.tagline}`,
+  description: site.heroSub,
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className="h-full antialiased">
-      <body className="min-h-full bg-[#120b06]">{children}</body>
+    <html lang="en" className={`h-full antialiased ${fraunces.variable}`}>
+      <body className="flex min-h-full flex-col bg-cream text-espresso">
+        <Nav />
+        <main className="flex-1 pt-[112px] sm:pt-[68px]">
+          {children}
+        </main>
+        <Footer />
+      </body>
     </html>
   );
 }

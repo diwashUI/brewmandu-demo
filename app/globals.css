@@ -1,26 +1,100 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --cream: #fffdf7;
+  --cream-dark: #f7f1e3;
+  --espresso: #2c1e10;
+  --muted: #7a6a55;
+  --caramel: #b45309;
+  --caramel-dark: #92400e;
+  --caramel-soft: #fef3e2;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-cream: var(--cream);
+  --color-cream-dark: var(--cream-dark);
+  --color-espresso: var(--espresso);
+  --color-muted: var(--muted);
+  --color-caramel: var(--caramel);
+  --color-caramel-dark: var(--caramel-dark);
+  --color-caramel-soft: var(--caramel-soft);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-display: var(--font-fraunces);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cream);
+  color: var(--espresso);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background: rgba(180, 83, 9, 0.18);
+}
+
+/* ── Page transitions (template.tsx remounts on every navigation) ── */
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-page-enter {
+  animation: page-enter 0.55s cubic-bezier(0.2, 0.7, 0.25, 1) both;
+}
+
+/* ── Scroll reveals ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s cubic-bezier(0.2, 0.7, 0.25, 1),
+    transform 0.7s cubic-bezier(0.2, 0.7, 0.25, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .animate-page-enter {
+    animation: none;
+  }
+}
+
+/* ── Slow hero zoom ── */
+@keyframes ken-burns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+.animate-ken-burns {
+  animation: ken-burns 14s ease-in-out infinite alternate;
+}
+
+/* ── Gentle float for badges ── */
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+.animate-float-soft {
+  animation: float-soft 5s ease-in-out infinite;
 }
