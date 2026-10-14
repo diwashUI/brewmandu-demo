@@ -150,7 +150,7 @@ export default function Home() {
           <Reveal>
             <div className="flex flex-col items-center gap-8 text-center">
               <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-caramel">
-                Powered by ReplyAgent
+                Powered by Sahayak Studio
               </p>
               <h2 className="max-w-2xl font-display text-4xl font-black text-espresso sm:text-5xl">
                 This website has a brain

@@ -3,8 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 
 /**
- * Floating AI-receptionist widget. It talks to the ReplyAgent backend
- * (one shared brain) — the same endpoint the ReplyAgent demo page uses.
+ * Floating AI-receptionist widget. It talks to the Sahayak Studio backend
+ * (one shared brain) — the same endpoint the studio demo page uses.
  * Drop <AgentChat /> in the site layout and every page gets the assistant.
  */
 const API = "https://reply-agent-indol.vercel.app/api/chat";
