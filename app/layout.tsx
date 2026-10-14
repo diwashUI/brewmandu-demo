@@ -3,6 +3,7 @@ import { Fraunces } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import AgentChat from "@/components/AgentChat";
 import { site } from "@/lib/site";
 
 const fraunces = Fraunces({
@@ -25,6 +26,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
         </main>
         <Footer />
+        <AgentChat />
       </body>
     </html>
   );

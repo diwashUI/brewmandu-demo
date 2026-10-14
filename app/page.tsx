@@ -144,6 +144,35 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── AI RECEPTIONIST ── */}
+      <section className="border-y border-espresso/10 bg-caramel-soft/60">
+        <div className="mx-auto max-w-6xl px-6 py-20">
+          <Reveal>
+            <div className="flex flex-col items-center gap-8 text-center">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-caramel">
+                Powered by ReplyAgent
+              </p>
+              <h2 className="max-w-2xl font-display text-4xl font-black text-espresso sm:text-5xl">
+                This website has a brain
+              </h2>
+              <p className="max-w-xl text-muted">
+                The AI receptionist is live on this very page — tap the chat
+                bubble, bottom-right, and ask it about the menu, hours, or
+                directions. It answers instantly, day or night.
+              </p>
+              <a
+                href="https://reply-agent-indol.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full bg-espresso px-8 py-3.5 font-bold text-cream transition hover:bg-caramel-dark"
+              >
+                How it works →
+              </a>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* ── VISIT CTA ── */}
       <section className="mx-auto max-w-6xl px-6 py-24">
         <Reveal>
