@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from "react";
  * (one shared brain) — the same endpoint the studio demo page uses.
  * Drop <AgentChat /> in the site layout and every page gets the assistant.
  */
-const API = "https://reply-agent-indol.vercel.app/api/chat";
+const API = "https://sahayak-studio.vercel.app/api/chat";
 
 interface Msg {
   role: "user" | "agent";

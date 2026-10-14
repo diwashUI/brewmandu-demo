@@ -161,7 +161,7 @@ export default function Home() {
                 directions. It answers instantly, day or night.
               </p>
               <a
-                href="https://reply-agent-indol.vercel.app"
+                href="https://sahayak-studio.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full bg-espresso px-8 py-3.5 font-bold text-cream transition hover:bg-caramel-dark"
