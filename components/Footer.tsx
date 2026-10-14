@@ -26,8 +26,8 @@ export default function Footer() {
         </div>
         <div className="mt-8 flex flex-col items-center justify-between gap-3 border-t border-espresso/10 pt-6 text-xs text-muted sm:flex-row">
           <span>
-            Demo website crafted by <span className="font-semibold text-espresso">diwash</span> — this is the
-            kind of site we build for local businesses.
+            Demo website crafted by <span className="font-semibold text-espresso">ReplyAgent</span> — smart
+            websites for local businesses.
           </span>
           <div className="flex items-center gap-5 font-medium">
             <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="transition hover:text-caramel">
