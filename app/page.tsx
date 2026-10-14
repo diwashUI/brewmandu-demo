@@ -150,7 +150,7 @@ export default function Home() {
           <Reveal>
             <div className="flex flex-col items-center gap-8 text-center">
               <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-caramel">
-                Powered by Sahayak Studio
+                Powered by SahayakOS
               </p>
               <h2 className="max-w-2xl font-display text-4xl font-black text-espresso sm:text-5xl">
                 This website has a brain
@@ -161,7 +161,7 @@ export default function Home() {
                 directions. It answers instantly, day or night.
               </p>
               <a
-                href="https://sahayak-studio.vercel.app"
+                href="https://sahayakos.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full bg-espresso px-8 py-3.5 font-bold text-cream transition hover:bg-caramel-dark"

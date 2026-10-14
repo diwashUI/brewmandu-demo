@@ -3,11 +3,11 @@
 import { useEffect, useRef, useState } from "react";
 
 /**
- * Floating AI-receptionist widget. It talks to the Sahayak Studio backend
+ * Floating AI-receptionist widget. It talks to the SahayakOS backend
  * (one shared brain) — the same endpoint the studio demo page uses.
  * Drop <AgentChat /> in the site layout and every page gets the assistant.
  */
-const API = "https://sahayak-studio.vercel.app/api/chat";
+const API = "https://sahayakos.vercel.app/api/chat";
 
 interface Msg {
   role: "user" | "agent";
